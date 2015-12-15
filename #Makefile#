@@ -1,0 +1,13 @@
+CXX=clang++
+
+CXXFLAGS =  -Wall -g
+
+BINARIES= main
+
+all: ${BINARIES}
+
+main: main.o Trie.o Node.o
+	${CXX} $^ -o $@
+
+clean:
+	/bin/rm -f ${BINARIES} *.o
